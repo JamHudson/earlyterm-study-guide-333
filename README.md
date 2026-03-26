@@ -1,6 +1,6 @@
-# midterm-study-guide-301
+# earlyterm-study-guide-301
 
-Below are possible starter questions for the midterm. You will be randomly assigned a question at the start of the exam. If you finish a question before time expires, you will be asked the time complexity of your solution and given another question of similar difficulty. If you finish the second question, you will be given a third, harder question The list of second and third questions will not be disclosed.
+Below are possible starter questions for the earlyterm. You will be randomly assigned a question at the start of the exam. If you finish a question before time expires, you will be asked the time complexity of your solution and given another question of similar difficulty. If you finish the second question, you will be given a third, harder question The list of second and third questions will not be disclosed.
 
 In the actual exam, we will not execute your code; the syntax does not need to be 100% perfect but you should still show strong Java proficiency.
 
