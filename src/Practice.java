@@ -24,8 +24,15 @@ public class Practice {
 
     // TODO: Implement the other methods from the README AND tests for each one
 
-    // Find the longest word that starts with a specific character letter in an ArrayList
-    public static String getLongestWord(ArrayList<String> list, char c) {
+    /**
+     * Returns the longest word that starts with a specific character letter in an
+     * ArrayList
+     * 
+     * @param list a list of words
+     * @param c the character the word should start with
+     * @return the longest word; "" if no word starts with the character
+     */
+    public static String getLongestWordStartingWithChar(ArrayList<String> list, char c) {
         String longestWord = "";
 
         // For each word
