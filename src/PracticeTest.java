@@ -134,6 +134,66 @@ public class PracticeTest {
 
         assertEquals(0, actual);
     }
+
+    @Test
+    void testOddEvenDiffOddOnly() {
+        HashMap<Integer,Integer> numbers = new HashMap<>();
+        numbers.put(1,1);
+        numbers.put(2,5);
+        numbers.put(3,3);
+        numbers.put(4,7);
+        numbers.put(5,1);
+
+        int actual = Practice.oddEvenDiff(numbers);
+
+        assertEquals(5, actual);
+    }
+
+    @Test
+    void testOddEvenDiffEvenOnly() {
+        HashMap<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(1, 2);
+        numbers.put(2, 6);
+        numbers.put(3, 4);
+        numbers.put(4, 8);
+        numbers.put(5, 2);
+
+        int actual = Practice.oddEvenDiff(numbers);
+
+        assertEquals(5, actual);
+    }
+
+    @Test
+    void testOddEvenDiffBoth() {
+        HashMap<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(1, 2);
+        numbers.put(2, 2);
+        numbers.put(3, 2);
+        numbers.put(4, 2);
+        numbers.put(5, 1);
+        numbers.put(6, 1);
+        numbers.put(7, 1);
+
+        int actual = Practice.oddEvenDiff(numbers);
+
+        assertEquals(1, actual);
+    }
+
+    @Test
+    void testOddEvenDiffZero() {
+        HashMap<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(1, 0);
+        numbers.put(2, 2);
+        numbers.put(3, 2);
+        numbers.put(4, 2);
+        numbers.put(5, 1);
+        numbers.put(6, 1);
+        numbers.put(7, 1);
+
+        int actual = Practice.oddEvenDiff(numbers);
+
+        assertEquals(0, actual);
+    }
 }
 
 
