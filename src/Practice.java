@@ -1,3 +1,4 @@
+import java.util.HashSet;
 import java.util.ArrayList;
 
 public class Practice {
@@ -51,6 +52,17 @@ public class Practice {
     }
 
     // Count how many words are longer than n characters and shorter than m characters in a HashSet
+    public static int countExtremeWords(HashSet<String> words, int n, int m) {
+        int count = 0;
+
+        for (String word : words) {
+            if (word.length() > n && word.length() < m) {
+                count++;
+            }
+        }
+
+        return count;
+    }
 
     // Find the difference between the amount of odd and even numbers in the values of a HashMap
 
