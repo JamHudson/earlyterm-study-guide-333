@@ -24,8 +24,6 @@ public class Practice {
         return (greatest-smallest);
     }
 
-    // TODO: Implement the other methods from the README AND tests for each one
-
     /**
      * Returns the longest word that starts with a specific character letter in an
      * ArrayList
@@ -54,7 +52,7 @@ public class Practice {
 
 
     /**
-     * Count how many words are longer than n characters and shorter than m
+     * Returns how many words are longer than n characters and shorter than m
      * characters in a HashSet
      * 
      * @param words set of words
@@ -78,11 +76,11 @@ public class Practice {
     }
 
     /**
-     * Find the difference between the amount of odd and even numbers in the values
+     * Returns the difference between the amount of odd and even numbers in the values
      * of a HashMap
      * 
-     * @param map map of integer keys and values
-     * @return difference between amount of odd and even numbers
+     * @param map map of Integers
+     * @return difference between amount of odd and even numbers of the values
      */
     public static int oddEvenDiff(HashMap<Integer,Integer> map) {
         int evenNums = 0;
@@ -100,7 +98,12 @@ public class Practice {
         return (evenNums - oddNums);
     }
 
-    // Find the second-largest number in the keys of a HashMap
+    /**
+     * Returns the second-largest number in the keys of a HashMap
+     * 
+     * @param map map of Integers
+     * @return the second largest integer of the keys
+     */
     public static int getSecondLargest(HashMap<Integer,Integer> map) {
         int largest = Integer.MIN_VALUE;
         int secondLargest = largest;
