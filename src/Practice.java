@@ -77,7 +77,13 @@ public class Practice {
         return count;
     }
 
-    // Find the difference between the amount of odd and even numbers in the values of a HashMap
+    /**
+     * Find the difference between the amount of odd and even numbers in the values
+     * of a HashMap
+     * 
+     * @param map map of integer keys and values
+     * @return difference between amount of odd and even numbers
+     */
     public static int oddEvenDiff(HashMap<Integer,Integer> map) {
         int evenNums = 0;
         int oddNums = 0;
