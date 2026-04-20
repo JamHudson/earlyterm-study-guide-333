@@ -118,8 +118,13 @@ public class Practice {
                 // Set current largest to key
                 secondLargest = largest;
                 largest = num;
+            // If key is second largest
+            } else if (num >= secondLargest) {
+                // Set second largest to key
+                secondLargest = num;
             }
         }
+        System.out.println("                   ");
         // If there's only one int in the map, then the secondLargest IS the largest.
         if (secondLargest == Integer.MIN_VALUE) secondLargest = largest;
         // Return second largest
