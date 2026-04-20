@@ -1,3 +1,5 @@
+import java.util.*;
+
 import static org.junit.Assert.*;
 
 import org.junit.jupiter.api.Test;
@@ -45,7 +47,49 @@ public class PracticeTest {
         assertEquals(12,actual);
     }
 
-    // TODO: Make tests for each problem you solve
+    @Test
+    void testGetLongestWordWithSpaceStart() {
+        ArrayList<String> words = new ArrayList<>();
+        words.add("fdlksd");
+        words.add("dlfkjgs");
+        words.add("dlkbdsljkfd");
+        words.add("spoweimb");
+        words.add("    woidjfeim");
+        words.add("ljewoijoiw     ");
+        words.add(" THISISWHATSHOULDBERETURNED");
+
+        String actual = Practice.getLongestWordStartingWithChar(words, ' ');
+
+        assertEquals(" THISISWHATSHOULDBERETURNED",actual);
+    }
+
+    @Test
+    void testGetLongestWordAllSameWord() {
+        ArrayList<String> words = new ArrayList<>();
+        words.add("wordies");
+        words.add("wordies");
+        words.add("wordies");
+        words.add("wordies");
+        words.add("wordies");
+        words.add("wordies");
+        words.add("wordies");
+        words.add("wordies");
+
+        String actual = Practice.getLongestWordStartingWithChar(words, 'w');
+
+        assertEquals("wordies", actual);
+    }
+
+    @Test
+    void testGetLongestWordLongestNotCharMatched() {
+        ArrayList<String> words = new ArrayList<>();
+        words.add("thisrighthereisthelongestwordEVER");
+        words.add("butthisonestartswithB");
+
+        String actual = Practice.getLongestWordStartingWithChar(words, 'b');
+
+        assertEquals("butthisonestartswithB", actual);
+    }
     
 }
 
