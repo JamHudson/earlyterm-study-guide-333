@@ -51,16 +51,28 @@ public class Practice {
         return longestWord;
     }
 
-    // Count how many words are longer than n characters and shorter than m characters in a HashSet
-    public static int countExtremeWords(HashSet<String> words, int n, int m) {
+
+    /**
+     * Count how many words are longer than n characters and shorter than m
+     * characters in a HashSet
+     * 
+     * @param words set of words
+     * @param n     the minimum length of a counted word, non-inclusive
+     * @param m     the maximum length of a counted word, non-inclusive
+     * @return amount of words that pass either threshold
+     */
+    public static int countWordsByLength(HashSet<String> words, int n, int m) {
         int count = 0;
 
+        // For each word
         for (String word : words) {
+            // If the word is greater than n, and shorter than m
             if (word.length() > n && word.length() < m) {
+                // Increment count
                 count++;
             }
         }
-
+        // Return count
         return count;
     }
 
