@@ -77,7 +77,8 @@ public class Practice {
 
     /**
      * Returns the difference between the amount of odd and even numbers in the values
-     * of a HashMap
+     * of a HashMap,
+     * Ignores 0.
      * 
      * @param map map of Integers
      * @return difference between amount of odd and even numbers of the values
@@ -88,6 +89,8 @@ public class Practice {
 
         // For each value
         for (Integer num : map.values()) {
+            // Skip 0
+            if (num == 0) continue;
             // If num is even, Increment evenNums
             if (num % 2 == 0) evenNums++;
             // If num is odd, Increment oddNums
