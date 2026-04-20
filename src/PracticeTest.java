@@ -91,6 +91,49 @@ public class PracticeTest {
         assertEquals("butthisonestartswithB", actual);
     }
     
+    @Test
+    void testCount5to10() {
+        HashSet<String> words = new HashSet<>();
+        words.add("fail");
+        words.add("passes");
+        words.add("success");
+        words.add("failsverybadly");
+        words.add("failsveryverybadly");
+
+        int actual = Practice.countWordsByLength(words, 5, 10);
+
+        assertEquals(2,actual);
+    }
+
+    @Test
+    void testCount5to5() {
+        HashSet<String> words = new HashSet<>();
+        words.add("fail");
+        words.add("noped");
+        words.add("failsverybadly");
+        words.add("failsveryverybadly");
+        words.add("superevilwordthatshouldn'twork");
+
+        int actual = Practice.countWordsByLength(words, 5, 5);
+
+        assertEquals(0, actual);
+    }
+
+    @Test
+    void testCountAllFails() {
+        HashSet<String> words = new HashSet<>();
+        words.add("fail");
+        words.add("wompwomp");
+        words.add("womp");
+        words.add("loseing");
+        words.add("failsverybadly");
+        words.add("failsveryverybadly");
+        words.add("superevilwordthatshouldn'twork");
+
+        int actual = Practice.countWordsByLength(words, -2, -2);
+
+        assertEquals(0, actual);
+    }
 }
 
 
