@@ -95,7 +95,7 @@ public class Practice {
         }
         
         // Return difference between evenNums and oddNums
-        return (evenNums - oddNums);
+        return Math.abs(evenNums - oddNums);
     }
 
     /**
