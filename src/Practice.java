@@ -13,7 +13,13 @@ public class Practice {
 
     // TODO: Implement the other methods from the README AND tests for each one
 
-    // For each method you are only required to implement it for one of the data
-    // structures. But use a different data structure for each method. For example,
-    // do maxDiff with an array, the next question with a Set, etc.
+    // Find the difference between the smallest and largest integer in an array
+    
+    // Find the longest word that starts with a specific character letter an ArrayList
+
+    // Count how many words are longer than n characters and shorter than m characters in a HashSet
+
+    // Find the difference between the amount of odd and even numbers in the values of a HashMap
+
+    // Find the second-largest number in the keys of a HashMap
 }
