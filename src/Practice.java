@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Practice {
     /**
      * Returns the difference between the largest and smallest integer in an array.
@@ -20,10 +22,26 @@ public class Practice {
         return (greatest-smallest);
     }
 
-
     // TODO: Implement the other methods from the README AND tests for each one
 
-    // Find the longest word that starts with a specific character letter an ArrayList
+    // Find the longest word that starts with a specific character letter in an ArrayList
+    public static String getLongestWord(ArrayList<String> list, char c) {
+        String longestWord = "";
+
+        // For each word
+        for (String word : list) {
+            // If the first character starts with the desired character
+            if (word.charAt(0) == c) {
+                // And the word is longer than the current longest word
+                if (word.length() > longestWord.length()) {
+                    // It is the new longest word.
+                    longestWord = word;
+                }
+            }
+        }
+        // Return the longest word
+        return longestWord;
+    }
 
     // Count how many words are longer than n characters and shorter than m characters in a HashSet
 
