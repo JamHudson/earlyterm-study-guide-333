@@ -101,4 +101,22 @@ public class Practice {
     }
 
     // Find the second-largest number in the keys of a HashMap
+    public static int getSecondLargest(HashMap<Integer,Integer> map) {
+        int largest = Integer.MIN_VALUE;
+        int secondLargest = largest;
+        // For each key
+        for (Integer num : map.keySet()) {
+            // If key is largest
+            if (num >= largest) {
+                // Set second largest to current largest
+                // Set current largest to key
+                secondLargest = largest;
+                largest = num;
+            }
+        }
+        // If there's only one int in the map, then the secondLargest IS the largest.
+        if (secondLargest == Integer.MIN_VALUE) secondLargest = largest;
+        // Return second largest
+        return secondLargest;
+    }
 }
