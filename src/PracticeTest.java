@@ -194,6 +194,87 @@ public class PracticeTest {
 
         assertEquals(0, actual);
     }
+
+    @Test
+    void testSecondLargest() {
+        HashMap<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(2, 1);
+        numbers.put(1, 2);
+        numbers.put(7, 3);
+        numbers.put(4, 4);
+        numbers.put(6, 5);
+
+        int actual = Practice.getSecondLargest(numbers);
+
+        assertEquals(6, actual);
+    }
+
+    @Test
+    void testSecondLargest2() {
+        HashMap<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(5, 1);
+        numbers.put(3, 2);
+        numbers.put(8, 3);
+        numbers.put(4, 4);
+        numbers.put(2, 5);
+
+        int actual = Practice.getSecondLargest(numbers);
+
+        assertEquals(5, actual);
+    }
+
+    @Test
+    void testSecondLargestNegativesAndPositives() {
+        HashMap<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(-3,0);
+        numbers.put( 3,1);
+        numbers.put(-6,2);
+        numbers.put( 4,3);
+        numbers.put(-1,4);
+
+        int actual = Practice.getSecondLargest(numbers);
+
+        assertEquals(3, actual);
+    }
+
+    @Test
+    void testSecondLargestOnlyNegatives() {
+        HashMap<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(-3,1);
+        numbers.put(-104,2);
+        numbers.put(-105,3);
+        numbers.put(-106,4);
+        numbers.put(-1,5);
+
+        int actual = Practice.getSecondLargest(numbers);
+
+        assertEquals(-3, actual);
+    }
+
+    // Is this test redundant? There's only one value in this one...
+    // @Test
+    // void testSecondLargestAllSame() {
+    //     HashMap<Integer, Integer> numbers = new HashMap<>();
+    //     numbers.put(1, 1);
+    //     numbers.put(1, 2);
+    //     numbers.put(1, 3);
+    //     numbers.put(1, 4);
+    //     numbers.put(1, 5);
+
+    //     int actual = Practice.getSecondLargest(numbers);
+
+    //     assertEquals(1, actual);
+    // }
+
+    @Test
+    void testSecondLargestOneNumber() {
+        HashMap<Integer, Integer> numbers = new HashMap<>();
+        numbers.put(3, 1);
+
+        int actual = Practice.getSecondLargest(numbers);
+
+        assertEquals(3, actual);
+    }
 }
 
 
