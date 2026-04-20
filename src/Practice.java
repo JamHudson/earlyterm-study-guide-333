@@ -1,5 +1,6 @@
 import java.util.HashSet;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Practice {
     /**
@@ -77,6 +78,21 @@ public class Practice {
     }
 
     // Find the difference between the amount of odd and even numbers in the values of a HashMap
+    public static int oddEvenDiff(HashMap<Integer,Integer> map) {
+        int evenNums = 0;
+        int oddNums = 0;
+
+        // For each value
+        for (Integer num : map.values()) {
+            // If num is even, Increment evenNums
+            if (num % 2 == 0) evenNums++;
+            // If num is odd, Increment oddNums
+            else oddNums++;
+        }
+        
+        // Return difference between evenNums and oddNums
+        return (evenNums - oddNums);
+    }
 
     // Find the second-largest number in the keys of a HashMap
 }
